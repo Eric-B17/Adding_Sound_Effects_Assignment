@@ -452,3 +452,116 @@ events:
       Running the CXX compiler's linker: "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/mingw/bin/ld.exe" "-v"
       GNU ld (GNU Binutils) 2.40
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake-build-debug/_deps/raylib-src/cmake/AddIfFlagCompiles.cmake:3 (CHECK_C_COMPILER_FLAG)"
+      - "cmake-build-debug/_deps/raylib-src/cmake/CompilerFlags.cmake:5 (add_if_flag_compiles)"
+      - "cmake-build-debug/_deps/raylib-src/CMakeLists.txt:34 (include)"
+    checks:
+      - "Performing Test COMPILER_HAS_THOSE_TOGGLES"
+    directories:
+      source: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oeht28"
+      binary: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oeht28"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/_deps/raylib-src/cmake"
+    buildResult:
+      variable: "COMPILER_HAS_THOSE_TOGGLES"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oeht28'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_33e81
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCOMPILER_HAS_THOSE_TOGGLES  -fdiagnostics-color=always   -Werror=pointer-arith -o CMakeFiles/cmTC_33e81.dir/src.c.obj -c C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oeht28/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_33e81.dir/src.c.obj -o cmTC_33e81.exe -Wl,--out-implib,libcmTC_33e81.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "cmake-build-debug/_deps/raylib-src/src/external/glfw/CMakeLists.txt:60 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5cv312"
+      binary: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5cv312"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/_deps/raylib-src/cmake;C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5cv312'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_5702f
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -fdiagnostics-color=always -o CMakeFiles/cmTC_5702f.dir/src.c.obj -c C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5cv312/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  CMakeFiles/cmTC_5702f.dir/src.c.obj -o cmTC_5702f.exe -Wl,--out-implib,libcmTC_5702f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug/_deps/raylib-src/src/external/glfw/src/CMakeLists.txt:274 (check_include_file)"
+    checks:
+      - "Looking for dinput.h"
+    directories:
+      source: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-07rwuz"
+      binary: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-07rwuz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/_deps/raylib-src/cmake;C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "DINPUT_H_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-07rwuz'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_d800f
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -std=gnu99 -fdiagnostics-color=always -o CMakeFiles/cmTC_d800f.dir/CheckIncludeFile.c.obj -c C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-07rwuz/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  CMakeFiles/cmTC_d800f.dir/CheckIncludeFile.c.obj -o cmTC_d800f.exe -Wl,--out-implib,libcmTC_d800f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug/_deps/raylib-src/src/external/glfw/src/CMakeLists.txt:275 (check_include_file)"
+    checks:
+      - "Looking for xinput.h"
+    directories:
+      source: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1ae7kw"
+      binary: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1ae7kw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/_deps/raylib-src/cmake;C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "XINPUT_H_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1ae7kw'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.3.1.1/bin/ninja/win/x64/ninja.exe" -v cmTC_6c43d
+        [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -std=gnu99 -fdiagnostics-color=always -o CMakeFiles/cmTC_6c43d.dir/CheckIncludeFile.c.obj -c C:/Users/Bishoeri000/CLionProjects/Adding_Sound_Effects_Assignment/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1ae7kw/CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  CMakeFiles/cmTC_6c43d.dir/CheckIncludeFile.c.obj -o cmTC_6c43d.exe -Wl,--out-implib,libcmTC_6c43d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...

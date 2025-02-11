@@ -1,25 +1,52 @@
-#include <iostream>
+#include "raylib.h"
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+void UnloadMusicStream(const Music & music);
+
+void UnloadMusicStream(const Music & music, const Music & jump_effect, const Music & collision_sound);
+
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
-    // <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+    InitWindow(800, 600, "Soundeffects Everywhere");
+    InitAudioDevice();
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code.
-        // We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/>
-        // breakpoint for you, but you can always add more by pressing
-        // <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+    Music BGMusic = LoadMusicStream("WilyCastleThemeMM2.mp4");
+    PlayMusicStream(BGMusic);
+
+    while (!WindowShouldClose()) {
+        UpdateMusicStream(BGMusic);
+
+        BeginDrawing();
+        ClearBackground(RAYWHITE);
+        DrawText("Background Music plays!", 200, 300, 20, DARKGRAY);
+        EndDrawing();
     }
 
+        Music jumpEffect = LoadMusicStream("Super Mario - Jump (Sound Effect).mp3");
+        PlayMusicStream(jumpEffect);
+
+    if (IsKeyPressed(KEY_SPACE)) {
+        PlayMusicStream(jumpEffect);
+
+        BeginDrawing();
+        ClearBackground(RAYWHITE);
+        DrawText("Press the spacebar!", 200, 300, 20, DARKGRAY);
+        EndDrawing();
+    }
+
+        Music collisionSound = LoadMusicStream("HomeRunBat.mp4");
+        PlayMusicStream(collisionSound);
+
+         if (IsKeyPressed(KEY_C)) {
+            PlayMusicStream(collisionSound);
+
+            BeginDrawing();
+            ClearBackground(RAYWHITE);
+            DrawText("Press the C Key!", 200, 300, 20, DARKGRAY);
+            EndDrawing();
+        }
+
+    UnloadMusicStream(BGMusic, jumpEffect, collisionSound);
+    CloseAudioDevice();
+    CloseWindow();
     return 0;
 }
 
-// TIP See CLion help at <a
-// href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
-//  Also, you can try interactive lessons for CLion by selecting
-//  'Help | Learn IDE Features' from the main menu.
